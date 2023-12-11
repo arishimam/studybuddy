@@ -1,0 +1,85 @@
+{% extends "studybuddy/layout.html" %}
+
+{% block body %}
+<div id="user-info">
+    <h3>Welcome, {{request.user.first_name}}!</h3>
+    <div>Username: {{request.user.username}}</div>  
+    <div>Email: {{request.user.email}}</div>
+            
+            
+</div>
+
+<br/>
+<!-- <a href="{% url 'logout' %}">Logout</a> -->
+
+{% if message %}
+<div>{{message}}</div>
+{% endif %}
+
+<div id="upload-box">
+    <div>
+        <h3>Upload Files:</h3>
+    </div>
+    <div id="uploads">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form}}
+            <button class= "upload-button" type="submit">Upload File</button>
+        </form>
+    </div>
+
+</div>
+
+
+<div id="note-section">
+    <h3>Uploaded Files:</h3>
+    <div id="notes"></div>
+    {% for audio_file in audio_files %}
+        <div class="note-card">
+            <div class="note-audio">
+                <div>
+                    <p>Filename: {{audio_file.file.name | cut:"audio_files/" }} </p>
+                    <p>Uploaded on {{ audio_file.uploaded_at }}</p>
+                </div>
+                <div>
+                    <audio controls>
+                        <source src="{{ audio_file.file.url }}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="note-buttons">
+                    <a class= "download-button" href="{{ audio_file.file.url }}" download>Download</a>
+                    <!-- <a href="{% url 'generate_notes' audio_file.id %}">Generate Notes</a> -->
+                    <form action="{% url 'generate_notes' audio_file.id %}" method="post">
+                        {% csrf_token %}
+                        <input class= "generate-button" type="submit" value="Generate Notes" onclick="return confirm('Are you sure? This will take 2-5 minutes.');">
+                    </form>
+                    <form action="{% url 'delete_audio' audio_file.id %}" method="post">
+                        {% csrf_token %}
+                        <input class= "delete-button" type="submit" value="Delete" onclick="return confirm('Are you sure?');">
+                    </form>
+                </div>
+            </div>
+            
+            <h4>Generated Notes:</h4>
+            {% for note in audio_file.notes.all %}
+            <div id="note-edits">
+                <a class='view-note' href="{% url 'view_note' note.id %}">{{ note.title | cut:"audio_files/"}}</a>
+                <a class="rename-button" href="{% url 'rename_note' note.id %}">Rename Note</a>
+                <form action="{% url 'delete_note' note.id %}" method="post">
+                    {% csrf_token %}
+                    <input class= "delete-button" type="submit" value="Delete" onclick="return confirm('Are you sure?');">
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endfor %}
+</div>
+
+
+
+
+
+{% endblock %}

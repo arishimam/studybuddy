@@ -1,0 +1,30 @@
+{% extends "studybuddy/layout.html" %}
+
+{% block body %}
+<a id="edit-button" href ="{% url 'edit_note' note.id %}">Edit Note</a>
+<div id="note-title"> {{ note.title }} </div>
+<div id="note-content"> {{ note.content }} </div>
+
+<!-- <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var noteContent = document.getElementById('note-content');
+        var text = noteContent.innerText;
+        var formattedText = text.split('- ').join('<br><br>');
+        noteContent.innerHTML = formattedText;
+    });
+</script> -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var noteContent = document.getElementById('note-content');
+        var text = noteContent.innerHTML;
+        var splitText = text.split('- ');
+        var formattedText = splitText.map(function(item) {
+            return item.trim() ? '&bull; ' + item.trim() : ''; // Adds a bullet point to each item
+        }).join('<br><br>');
+        noteContent.innerHTML = formattedText;
+    });
+</script>
+
+
+{% endblock %}

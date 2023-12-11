@@ -1,0 +1,266 @@
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(31, 67, 31)
+}
+
+body {
+    width: 100%;
+    background: #e7e7e7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+.note-buttons {
+    display: flex;
+}
+
+
+#note-edits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.download-button, .rename-button, #edit-button {
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: 600;
+    font-size: 13px;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    background-color: #555555;
+}
+
+.rename-button, #edit-button {
+    width: 125px;
+    background-color:#e7e7e7;
+    color: black;
+    margin-bottom: 10px;
+}
+
+#edit-button {
+    margin-top: 20px;
+}
+.rename-button:hover, #edit-button:hover{
+    background-color:#988e8e;
+}
+.download-button:hover {
+    background-color: #383737;
+}
+
+.view-note {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.view-note:hover {
+    font-weight:900;
+}
+
+.upload-button, .delete-button, .generate-button {
+    width: 100px;
+    height: 30px;
+    font-weight: 600;
+    font-size: 13px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(109, 181, 239);
+}
+
+.upload-button:hover, .delete-button:hover, .generate-button {
+    cursor:pointer;
+}
+.upload-button:hover{
+    background-color: rgb(64, 141, 203);
+}
+.delete-button:hover{
+    background-color: #97261e;
+}
+.generate-button:hover {
+    background-color: rgb(64, 148, 29);
+}
+
+.delete-button {
+    background-color: #f44336;
+}
+
+.generate-button {
+    width: 150px;
+    background-color: rgb(80, 189, 34);
+}
+
+#logo:visited {
+    color: rgb(31, 67, 31);
+}
+
+#logo {
+    width: 220px;
+    font-size: 25px;
+    font-weight: 900;
+    height: 60px;
+    line-height: 60px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    height:60px;
+    line-height: 60px;
+}
+
+#nav-links {
+    display:flex;
+    align-items: center;
+}
+
+#nav-links a {
+    width: 100px;
+    text-align: center;
+}
+
+#nav-links a:hover {
+    background-color: lightgray;
+    font-weight:700;
+}
+
+#nav-links a:visited {
+    color:rgb(31, 67, 31);
+}
+
+#user-info {
+    font-size: 25px;
+    padding: 10px;
+    color: rgb(31, 67, 31)
+}
+
+#note-section {
+    max-width: 1000px;
+}
+#notes {
+    max-width: 1000px;
+    /* display: flex;
+    flex-wrap: wrap;
+    align-items: center; */
+}
+.note-card {
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin: 20px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.note-audio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.note-card div {
+    margin-bottom: 20px;
+}
+
+#upload-box {
+    width: 300px;
+    height: auto;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#upload-box div, #upload-box div form button  {
+    margin: 10px 0;
+    align-self: center;
+}
+#note-title {
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+#note-content {
+    white-space: pre-line; 
+    font-family: Arial, sans-serif; 
+    line-height: 1.3; 
+    font-size: 18px;
+    margin: 0 20px; 
+}
+
+#login-box {
+    width: 350px;
+    height: 250px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#login-form input {
+    width: 280px;
+    height: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#login-form #login-button {
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    font-size:25px;
+    font-weight: 600;
+    border-radius: 5px;
+    color: white;
+    background-color: #555555;
+    
+}
+
+#login-form #login-button:hover {
+    cursor: pointer;
+    background-color: #3a3939;
+}
+
+#welcome {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

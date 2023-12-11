@@ -1,0 +1,29 @@
+{% extends "studybuddy/layout.html" %} 
+
+{% block body %}
+
+  {% if message %}
+    <div>{{message}}</div>
+  {% endif %}
+
+  <div id="welcome">
+    <h1>Welcome to Study Buddy</h1>
+    <p>Login or Register to upload and convert your audio files to notes!</p>
+  </div>
+
+
+
+  <div id="login-box">
+    <form id="login-form" action="{% url 'login' %}" method="post">
+      {% csrf_token %}
+
+      <input class="'login-item" type="text" name="username" placeholder="Username" />
+
+      <input class= "login-box" type="password" name="password" placeholder="Password" />
+
+      <input id = "login-button" type="submit" name="submit">
+    </form>
+  </div>
+  
+
+{% endblock %}

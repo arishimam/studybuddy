@@ -1,0 +1,11 @@
+{% extends "studybuddy/layout.html" %}
+
+{% block body %}
+<h2> Rename Note</h2>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Save changes</button>
+</form>
+
+{% endblock %}
