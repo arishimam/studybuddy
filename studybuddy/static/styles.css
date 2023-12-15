@@ -264,3 +264,53 @@ a:visited {
     flex-direction: column;
     align-items: center;
 }
+
+#register-box {
+    width: 500px;
+    /* height: 250px; */
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    align-items: center;
+}
+
+#register-box p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#register-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#register-form input {
+    width: 280px;
+    height: 30px;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+}
+
+#register-form label {
+    font-size: large;
+    font-weight: bold;
+}
+
+#register-form p, #register-form li {
+    font-size: large;
+    max-width: 400px;
+    
+}

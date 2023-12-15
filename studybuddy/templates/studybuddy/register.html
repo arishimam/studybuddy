@@ -2,9 +2,12 @@
 
 {% block body %}
 <h2>Register</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Register</button>
-</form>
+<div id="register-box">
+    <form id = "register-form" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class= "download-button ="submit">Register</button>
+    </form>
+</div>
+
 {% endblock %}
