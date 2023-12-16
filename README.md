@@ -1,7 +1,7 @@
 # Study Buddy
 
 ## Introduction
-
+g
 [Brief description of Study Buddy, such as purpose and other relevant info.]
 
 ## Prerequisites
@@ -19,11 +19,11 @@ and
 
 ### 1. Clone the Repository
 
-Clone the project repository to your local machine using:
+Clone the project repository to your local machine and navigate to cloned directory using:
 
 ```
-git clone [URL_of_Your_Repository]
-cd [Repository_Name]
+git clone https://github.com/arishimam/studybuddy.git
+cd studybuddy
 ```
 
 ### 2. Create a Virtual Environment
@@ -50,7 +50,7 @@ Install all the required packages using:
 
 #### Creating a .env File
 
-For the project to function correctly, you need to set up environment variables, including your OpenAI API key. Create a `.env` file in the root directory of the project and add your OpenAI API key as follows:
+For the project to function correctly, you need to set up environment variables, including your OpenAI API key. Create a `.env` file in the same directory as the `.env.evample` file provided in the project. This will likely be located in the directory: `studybuddy/studybuddy`. Add your OpenAI API key as follows:
 
 ```OPENAI_API_KEY=your_api_key_here```
 
@@ -94,6 +94,10 @@ However, if you encounter any issues, please refer to the [Celery Documentation]
 
 ## Additional Notes
 
-[Additional information or steps necessary for project.]
+You can either register a new account or test with an existing account. Here are the credentials for user account that already contains some generated notes:
 
+```
+username
+password
+```
 
