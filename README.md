@@ -1,7 +1,7 @@
 # Study Buddy
 
 ## Introduction
-g
+
 [Brief description of Study Buddy, such as purpose and other relevant info.]
 
 ## Prerequisites
@@ -79,7 +79,7 @@ Now, the Django project should be accessible at `http://127.0.0.1:8000/studybudd
 
 ## Running Celery
 
-Celery is used for asynchronous task processing. To run Celery, open a new terminal and ensure your virtual environment is activated.
+Celery is used for asynchronous task processing. We use it in this project to make the api calls to OpenAI for generating notes from uploaded audio files. To run Celery, open a new terminal and ensure your virtual environment is activated.
 
 ### For macOS/Linux:
 ```celery -A myproject worker -l info```
@@ -97,7 +97,7 @@ However, if you encounter any issues, please refer to the [Celery Documentation]
 You can either register a new account or test with an existing account. Here are the credentials for user account that already contains some generated notes:
 
 ```
-username
-password
+tester
+tablet12
 ```
 

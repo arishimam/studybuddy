@@ -67,7 +67,13 @@ a:visited {
     font-size: 15px;
     font-weight: 600;
     margin: 10px 0;
+    color: rgb(109, 181, 239);
 }
+
+.view-note:visited {
+    color: rgb(109, 181, 239);
+}
+
 
 .view-note:hover {
     font-weight:900;
