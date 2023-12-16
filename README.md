@@ -43,7 +43,20 @@ venv\Scripts\activate
 ### 3. Install Required Packages
 
 Install all the required packages using:
+
 ```pip install -r requirements.txt```
+
+### 4. Environment Setup
+
+#### Creating a .env File
+
+For the project to function correctly, you need to set up environment variables, including your OpenAI API key. Create a `.env` file in the root directory of the project and add your OpenAI API key as follows:
+
+```OPENAI_API_KEY=your_api_key_here```
+
+Replace `your_api_key_here` with your actual OpenAI API key. This file will be used by the application to securely access the API key without hardcoding it into the source code.
+
+**Important:** Ensure that the `.env` file is added to your `.gitignore` file to prevent your API key from being exposed publicly.
 
 ## Running the Django Project
 
@@ -62,7 +75,7 @@ Start the Django development server by running:
 
 ```python manage.py runserver```
 
-Now, the Django project should be accessible at `http://127.0.0.1:8000/`.
+Now, the Django project should be accessible at `http://127.0.0.1:8000/studybuddy`.
 
 ## Running Celery
 
@@ -81,6 +94,6 @@ However, if you encounter any issues, please refer to the [Celery Documentation]
 
 ## Additional Notes
 
-[Additional information or steps necessary for your project.]
+[Additional information or steps necessary for project.]
 
 
