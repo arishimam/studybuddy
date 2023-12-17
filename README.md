@@ -60,16 +60,7 @@ Replace `your_api_key_here` with your actual OpenAI API key. This file will be u
 
 ## Running the Django Project
 
-### 1. Initialize the Database
-
-Before running the server, you need to make migrations and migrate the database:
-
-```
-python manage.py makemigrations
-python manage.py migrate
-```
-
-### 2. Run the Django Server
+### Run the Django Server
 
 Start the Django development server by running:
 
