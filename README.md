@@ -2,7 +2,7 @@
 
 ## Introduction
 
-[Brief description of Study Buddy, such as purpose and other relevant info.]
+StudyBuddy is a web application that aids students in the learning process by automatically generating notes from audio recordings. The purpose is to help students to recall what they learned in class, which ultimately allows them to learn better. Many studies confirm that the act of recalling something soon after learning it solidifies the learning pathways in the brain. Furthermore, it will allow students to focus on the overall concept of the lecture without worrying about writing down every word the lecturer says.
 
 ## Prerequisites
 
