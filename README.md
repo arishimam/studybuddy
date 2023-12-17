@@ -92,4 +92,4 @@ tester
 tablet12
 ```
 
--Note there is currently an issue running the celery worker on some Windows Operating Systems. If celery is unable to communicate with Django, the note generation functionality will not work. 
+- Note there is currently an issue running the celery worker on some Windows Operating Systems. If celery is unable to communicate with Django, the note generation functionality will not work. 
