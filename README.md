@@ -2,7 +2,7 @@
 
 ## Introduction
 
-StudyBuddy is a web application that aids students in the learning process by automatically generating notes from audio recordings. The purpose is to help students to recall what they learned in class, which ultimately allows them to learn better. Many studies confirm that the act of recalling something soon after learning it solidifies the learning pathways in the brain. Furthermore, it will allow students to focus on the overall concept of the lecture without worrying about writing down every word the lecturer says.
+StudyBuddy is a web application that aids students in the learning process by automatically generating notes from audio recordings. The purpose is to help students to recall what they learned in class, which ultimately allows them to learn better. 
 
 ## Prerequisites
 
@@ -92,3 +92,4 @@ tester
 tablet12
 ```
 
+-Note there is currently an issue running the celery worker on some Windows Operating Systems. If celery is unable to communicate with Django, the note generation functionality will not work. 
